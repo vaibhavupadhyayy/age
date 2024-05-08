@@ -34,5 +34,5 @@ If you find the Age Calculator useful, consider sharing it with your friends and
 
 ## Connect
 
-Let's connect! You can find me on [LinkedIn](https://www.linkedin.com/in/vaibhav-upadhyays/) or [GitHub](https://vaibhavupadhyayy.github.io/) for any inquiries or collaborations.
+Let's connect! You can find me on [LinkedIn](https://www.linkedin.com/in/vaibhav-upadhyays/) or [GitHub](https://github.com/vaibhavupadhyayy) for any inquiries or collaborations.
 
