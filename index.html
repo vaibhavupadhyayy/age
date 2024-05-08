@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+<div class="container">
+    <div class="calculator">
+        <h1>Javascipt <br><span>Age Calculator</span> </h1>
+        <div class="input-box">
+            <input type="date" id="date">
+            <button onclick="calculateAge()">Calculate</button>
+        </div>
+        <div id="result"></div> <!-- Adding a div to display the result -->
+    </div>
+</div>
+
+<script>
+// Set max attribute to today's date
+document.getElementById("date").max = new Date().toISOString().split("T")[0];
+
+function calculateAge(){
+    let userInput = document.getElementById("date");
+    let birthDate = new Date(userInput.value);
+    let today = new Date();
+    
+    let yearsDiff = today.getFullYear() - birthDate.getFullYear();
+    let monthsDiff = today.getMonth() - birthDate.getMonth();
+    let daysDiff = today.getDate() - birthDate.getDate();
+    
+    if (monthsDiff < 0 || (monthsDiff === 0 && daysDiff < 0)) {
+        yearsDiff--;
+        monthsDiff += 12;
+    }
+    
+    // Adjust days difference if it's negative
+    if (daysDiff < 0) {
+        // Get the last day of the previous month
+        let lastDayOfPreviousMonth = new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+        daysDiff += lastDayOfPreviousMonth;
+        monthsDiff--; // Subtract one month
+    }
+    
+    document.getElementById("result").innerText = "You are " + yearsDiff + " years, " + monthsDiff + " months, and " + daysDiff + " days old.";
+}
+</script>
+
+</body>
+</html>
