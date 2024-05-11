@@ -55,3 +55,9 @@
     color: #333;
     cursor: pointer;
 }
+footer p{
+    display:flex;
+    text-align:center;
+    justify-contact:center;
+    align-item:center;
+}
