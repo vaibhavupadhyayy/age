@@ -56,8 +56,6 @@
     cursor: pointer;
 }
 footer p{
-    display:flex;
-    text-align:center;
-    justify-contact:center;
-    align-item:center;
+    display: flex;
+    justify-content: center;
 }
